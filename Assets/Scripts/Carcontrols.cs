@@ -6,9 +6,16 @@ public class Carcontrols : MonoBehaviour
 {
      public Rigidbody theRB;
 
-    public float forwardaccel = 8f , reverseAccel = 4f, macSpeed = 50f , turnStrength = 180;
+    public float forwardaccel = 8f , reverseAccel = 4f, macSpeed = 50f , turnStrength = 180 , gravityForce = 10f ;
 
     private float speedInput, turnInput;
+
+    private bool grounded;
+
+    public LayerMask WhatisGround;
+    public float groundRayLength = .5f;
+    public Transform groundRayPoint;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,17 +38,33 @@ public class Carcontrols : MonoBehaviour
 
         turnInput = Input.GetAxis("Horizontal");
 
-
-        transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles + new Vector3(0f, turnInput * turnStrength * Time.deltaTime * Input.GetAxis("Vertical"), 0f));
-            
+        if (grounded = true)
+        {
+            transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles + new Vector3(0f, turnInput * turnStrength * Time.deltaTime * Input.GetAxis("Vertical"), 0f));
+        }       
             transform.position = theRB.transform.position; 
     }
 
     private void FixedUpdate()
     {
-        if (Mathf.Abs(speedInput) > 0)
+        grounded = false;
+        RaycastHit hit;
+
+        if(Physics.Raycast(groundRayPoint.position, transform.up, out hit, groundRayLength, WhatisGround))
         {
-            theRB.AddForce(transform.forward * speedInput);
+            grounded = true;
+        }
+
+        if (grounded = true)
+        {
+            if (Mathf.Abs(speedInput) > 0)
+            {
+                theRB.AddForce(transform.forward * speedInput);
+            }
+        } 
+        else
+        {
+            theRB.AddForce(Vector3.up * -gravityForce * 100f);
         }
     }
 }
