@@ -6,15 +6,19 @@ public class Carcontrols : MonoBehaviour
 {
      public Rigidbody theRB;
 
-    public float forwardaccel = 8f , reverseAccel = 4f, macSpeed = 50f , turnStrength = 180 , gravityForce = 10f ;
+    public float forwardaccel = 8f , reverseAccel = 4f, macSpeed = 50f , turnStrength = 180 , gravityForce = 10f, dragOnGround =3f;
 
     private float speedInput, turnInput;
 
     private bool grounded;
 
-    public LayerMask WhatisGround;
+    public LayerMask whatIsGround;
     public float groundRayLength = .5f;
     public Transform groundRayPoint;
+    public float defultRotation = 0;
+
+    public Transform leftFrontWheel, rightFrontWheel;
+    public float maxWheelTurn = 25f; 
 
     // Start is called before the first frame update
     void Start()
@@ -38,25 +42,33 @@ public class Carcontrols : MonoBehaviour
 
         turnInput = Input.GetAxis("Horizontal");
 
-        if (grounded = true)
-        {
-            transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles + new Vector3(0f, turnInput * turnStrength * Time.deltaTime * Input.GetAxis("Vertical"), 0f));
-        }       
-            transform.position = theRB.transform.position; 
+       // if (grounded)
+        //{
+            transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles + new Vector3(0f, turnInput * turnStrength * Time.deltaTime/* * Input.GetAxis("Vertical")*/, 0f));
+       // }       
+    transform.position = theRB.transform.position;
+    
+        leftFrontWheel.localRotation = Quaternion.Euler(leftFrontWheel.localRotation.eulerAngles.x, (turnInput * maxWheelTurn) - 180, leftFrontWheel.localRotation.eulerAngles.z);
+        rightFrontWheel.localRotation = Quaternion.Euler(rightFrontWheel.localRotation.eulerAngles.x, turnInput * maxWheelTurn, rightFrontWheel.localRotation.eulerAngles.z);
     }
+
+    
 
     private void FixedUpdate()
     {
         grounded = false;
         RaycastHit hit;
 
-        if(Physics.Raycast(groundRayPoint.position, transform.up, out hit, groundRayLength, WhatisGround))
+        if  (Physics.Raycast(groundRayPoint.position, -transform.up, out hit, groundRayLength, whatIsGround))
         {
             grounded = true;
-        }
 
-        if (grounded = true)
+            transform.rotation = Quaternion.FromToRotation(transform.up, hit.normal) * transform.rotation;
+        }
+       
+        if (grounded)
         {
+            theRB.drag = dragOnGround;
             if (Mathf.Abs(speedInput) > 0)
             {
                 theRB.AddForce(transform.forward * speedInput);
@@ -64,6 +76,7 @@ public class Carcontrols : MonoBehaviour
         } 
         else
         {
+            theRB.drag = 0.1f;
             theRB.AddForce(Vector3.up * -gravityForce * 100f);
         }
     }
