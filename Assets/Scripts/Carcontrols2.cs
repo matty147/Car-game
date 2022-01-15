@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Carcontrols : MonoBehaviour
+public class Carcontrols2 : MonoBehaviour
 {
      public Rigidbody theRB;
 
@@ -30,17 +30,17 @@ public class Carcontrols : MonoBehaviour
     void Update()
     {
         speedInput = 0f;
-        if (Input.GetAxis("Vertical") > 0)
+        if (Input.GetAxis("Vertical2") > 0)
         {
-            speedInput = Input.GetAxis("Vertical") * forwardaccel * 1000f;
+            speedInput = Input.GetAxis("Vertical2") * forwardaccel * 1000f;
         }
         
-        else if (Input.GetAxis("Vertical") < 0)
+        else if (Input.GetAxis("Vertical2") < 0)
         {
-            speedInput = Input.GetAxis("Vertical") * reverseAccel * 1000f;
+            speedInput = Input.GetAxis("Vertical2") * reverseAccel * 1000f;
         }
 
-        turnInput = Input.GetAxis("Horizontal");
+        turnInput = Input.GetAxis("Horizontal2");
 
        // if (grounded)
         //{
