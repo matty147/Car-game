@@ -15,7 +15,52 @@ public class Carswitch : MonoBehaviour
     [SerializeField]
     KeyCode Minus;
 
+    private Camera getCam(int idx)
+    {
+        Debug.Log($"Camera: 'Cam{idx}'");
+        return GameObject.Find($"Cam{idx}").GetComponent<Camera>();
+    }
 
+    enum Placement
+    {
+        Full,
+        Top,
+        Bottom,
+        TopLeft,
+        TopRight,
+        BottomLeft,
+        BottomRight,
+        Off
+    }
+
+    private Rect placementRect(Placement placement)
+    {
+        switch(placement)
+        {
+            case Placement.Full:
+                return new Rect(0f, 0f, 1f, 1f);
+            case Placement.Top:
+                return new Rect(0f, 0.5f, 1f, 0.5f);
+            case Placement.Bottom:
+                return new Rect(0f, 0f, 1f, 0.5f);
+            case Placement.TopLeft:
+                return new Rect(0f, 0.5f, 0.5f, 0.5f);
+            case Placement.TopRight:
+                return new Rect(0.5f, 0.5f, 0.5f, 0.5f);
+            case Placement.BottomLeft:
+                return new Rect(0f, 0f, 0.5f, 0.5f);
+            case Placement.BottomRight:
+                return new Rect(0.5f, 0f, 0.5f, 0.5f);
+            case Placement.Off:
+            default:
+                return new Rect(0f, 0f, 0f, 0f);
+        }
+    }
+
+    private void placeCamera(int idx, Placement placement)
+    {
+        getCam(idx).rect = placementRect(placement);
+    }
 
     void UpdateActivePlayers()
     {
@@ -23,14 +68,14 @@ public class Carswitch : MonoBehaviour
         {
             case 1:
                 Debug.Log($"1");
-                GameObject.Find("Player1").GetComponent<Carcontrols1>().enabled = true;//on
-                GameObject.Find("Player2").GetComponent<Carcontrols2>().enabled = false;//off
-                GameObject.Find("Player3").GetComponent<Carcontrols3>().enabled = false;//off
-                GameObject.Find("Player4").GetComponent<Carcontrols4>().enabled = false;//off
-                GameObject.Find("Cam1").GetComponent<Camera>().rect = new Rect(0f, 0f, 1f, 1f);
-                GameObject.Find("Cam2").GetComponent<Camera>().rect = new Rect(1f, 1f, 0f, 0f); 
-                GameObject.Find("Cam3").GetComponent<Camera>().rect = new Rect(1f, 1f, 0f, 0f); 
-                GameObject.Find("Cam4").GetComponent<Camera>().rect = new Rect(1f, 1f, 0f, 0f); 
+                GameObject.Find("Player1").GetComponent<Carcontrols1>().enabled = true; //on
+                GameObject.Find("Player2").GetComponent<Carcontrols2>().enabled = false; //off
+                GameObject.Find("Player3").GetComponent<Carcontrols3>().enabled = false; //off
+                GameObject.Find("Player4").GetComponent<Carcontrols4>().enabled = false; //off
+                placeCamera(1, Placement.Full);
+                placeCamera(2, Placement.Off);
+                placeCamera(3, Placement.Off);
+                placeCamera(4, Placement.Off);
                 break;
             case 2:
                 Debug.Log($"2");
@@ -38,10 +83,10 @@ public class Carswitch : MonoBehaviour
                 GameObject.Find("Player2").GetComponent<Carcontrols2>().enabled = true; //on
                 GameObject.Find("Player3").GetComponent<Carcontrols3>().enabled = false; //off
                 GameObject.Find("Player4").GetComponent<Carcontrols4>().enabled = false; //off
-                GameObject.Find("Cam1").GetComponent<Camera>().rect = new Rect(0f, 0.5f, 1f, 0.5f);
-                GameObject.Find("Cam2").GetComponent<Camera>().rect = new Rect(0f, 0f, 1f, 0.5f);
-                GameObject.Find("Cam3").GetComponent<Camera>().rect = new Rect(1f, 1f, 0f, 0f);
-                GameObject.Find("Cam4").GetComponent<Camera>().rect = new Rect(1f, 1f, 0f, 0f);
+                placeCamera(1, Placement.Top);
+                placeCamera(2, Placement.Bottom);
+                placeCamera(3, Placement.Off);
+                placeCamera(4, Placement.Off);
                 break;
             case 3:
                 Debug.Log($"3");
@@ -49,20 +94,20 @@ public class Carswitch : MonoBehaviour
                 GameObject.Find("Player2").GetComponent<Carcontrols2>().enabled = true; //on
                 GameObject.Find("Player3").GetComponent<Carcontrols3>().enabled = true; //on
                 GameObject.Find("Player4").GetComponent<Carcontrols4>().enabled = false; //off
-                GameObject.Find("Cam1").GetComponent<Camera>().rect = new Rect(0f, 0.5f, 0.5f, 0.5f);
-                GameObject.Find("Cam2").GetComponent<Camera>().rect = new Rect(0.5f, 0.5f, 0.5f, 0.5f);
-                GameObject.Find("Cam3").GetComponent<Camera>().rect = new Rect(0f, 0f, 0.5f, 0.5f);
-                GameObject.Find("Cam4").GetComponent<Camera>().rect = new Rect(0.5f, 0f, 0.5f, 0.5f);
+                placeCamera(1, Placement.TopLeft);
+                placeCamera(2, Placement.TopRight);
+                placeCamera(3, Placement.BottomLeft);
+                placeCamera(4, Placement.BottomRight);
                 break;
             case 4:
                 GameObject.Find("Player1").GetComponent<Carcontrols1>().enabled = true;//on
                 GameObject.Find("Player2").GetComponent<Carcontrols2>().enabled = true;//on
                 GameObject.Find("Player3").GetComponent<Carcontrols3>().enabled = true;//on
                 GameObject.Find("Player4").GetComponent<Carcontrols4>().enabled = true;//on
-                GameObject.Find("Cam1").GetComponent<Camera>().rect = new Rect(0f, 0.5f, 0.5f, 0.5f);
-                GameObject.Find("Cam2").GetComponent<Camera>().rect = new Rect(0.5f, 0.5f, 0.5f, 0.5f);
-                GameObject.Find("Cam3").GetComponent<Camera>().rect = new Rect(0f, 0f, 0.5f, 0.5f);
-                GameObject.Find("Cam4").GetComponent<Camera>().rect = new Rect(0.5f, 0f, 0.5f, 0.5f);
+                placeCamera(1, Placement.TopLeft);
+                placeCamera(2, Placement.TopRight);
+                placeCamera(3, Placement.BottomLeft);
+                placeCamera(4, Placement.BottomRight);
                 Debug.Log($"4");
                 break;
             default:
@@ -70,6 +115,9 @@ public class Carswitch : MonoBehaviour
                 break;
         }
     }
+
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -103,4 +151,6 @@ public class Carswitch : MonoBehaviour
             }
         
     }
+
+
 }
