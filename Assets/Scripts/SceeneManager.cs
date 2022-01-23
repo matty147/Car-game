@@ -5,8 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class SceeneManager : MonoBehaviour
 {
-    private float Clicktimer;
-    public float Pause;
+    private static int CurrentMap = 0;
+
+    private static readonly List<string> Maps = new List<string>()
+    {
+        "maintrack",
+        "luigi's circuit"
+    };
+
 
     [SerializeField]
     KeyCode PrevMap;
@@ -14,50 +20,37 @@ public class SceeneManager : MonoBehaviour
     [SerializeField]
     KeyCode NextMap;
 
-    private int CurrentMap = 0;
-
-    private readonly List<string> Maps = new List<string>()
-    {
-        "maintrack",
-        "luigi's circuit"
-    };
 
     // Start is called before the first frame update
     void Start()
     {
-        Clicktimer = 0; 
+        Debug.Log($"Load Manager: {CurrentMap}");
     }
 
     // Update is called once per frame
     void Update()
     {
-        // SceneManager.LoadScene (sceneName:"Put the name of the scene here");
-        if (Clicktimer == 0)
-        {
-            if (Input.GetKeyUp(PrevMap))
+        if (Input.GetKeyDown(PrevMap))
             {
-                Debug.Log($"Scene: Minus0 '{CurrentMap}' > {Maps[CurrentMap]}");
+                Debug.Log($"  Scene: Minus0 '{CurrentMap}' > {Maps[CurrentMap]}");
+
                 CurrentMap--;
                 if (CurrentMap < 0) CurrentMap = Maps.Count - 1;
                 SceneManager.LoadScene(sceneName: Maps[CurrentMap]);
-                Debug.Log($"Scene: Minus1 '{CurrentMap}' > {Maps[CurrentMap]}");
-                Clicktimer = Pause;
+
+                Debug.Log($"  Scene: Minus1 '{CurrentMap}' > {Maps[CurrentMap]}");
             }
-            else if (Input.GetKeyUp(NextMap))
+            else if (Input.GetKeyDown(NextMap))
             {
-                Debug.Log($"Scene: Plus0 '{CurrentMap}' > {Maps[CurrentMap]}");
+                Debug.Log($"  Scene: Plus0 '{CurrentMap}' > {Maps[CurrentMap]}");
+
                 CurrentMap++;
                 if (CurrentMap >= Maps.Count) CurrentMap = 0;
                 SceneManager.LoadScene(sceneName: Maps[CurrentMap]);
-                Debug.Log($"Scene: Plus1 '{CurrentMap}' > {Maps[CurrentMap]}");
-                Clicktimer = Pause;
+
+                Debug.Log($"  Scene: Plus1 '{CurrentMap}' > {Maps[CurrentMap]}");
             }
-        }else if (Clicktimer > 0)
-        {
-            Clicktimer--;
-        }else
-        {
-            Debug.Log($"error");
-        }
+            
+        
     }
 }

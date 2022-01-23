@@ -17,7 +17,7 @@ public class Carswitch : MonoBehaviour
 
     private Camera getCam(int idx)
     {
-        Debug.Log($"Camera: 'Cam{idx}'");
+        //Debug.Log($"Camera: 'Cam{idx}'");
         return GameObject.Find($"Cam{idx}").GetComponent<Camera>();
     }
 
@@ -130,7 +130,7 @@ public class Carswitch : MonoBehaviour
     void FixedUpdate()
     {
        
-            if (Input.GetKeyUp(Plus))
+            if (Input.GetKeyDown(Plus))
             {
                 if (ActivePlayers < 4)
                 {
@@ -140,7 +140,7 @@ public class Carswitch : MonoBehaviour
                 }
 
             }
-            if (Input.GetKeyUp(Minus))
+            if (Input.GetKeyDown(Minus))
             {
                 if (ActivePlayers > 1)
                 {

@@ -4888,6 +4888,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0aa8f2654d1a744cabd8681ae415ad8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Clicktimer: 0
+  Pause: 100
   PrevMap: 282
   NextMap: 283
 --- !u!1001 &1112641204
