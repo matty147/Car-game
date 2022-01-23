@@ -140,7 +140,7 @@ public class Carswitch : MonoBehaviour
                 }
 
             }
-            if (Input.GetKeyDown(Minus))
+            if (Input.GetKeyDown    (Minus))
             {
                 if (ActivePlayers > 1)
                 {
