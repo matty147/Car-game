@@ -11,4 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/luigi's circuit.unity
     guid: 05752ba05c403484fbf43e256839b34f
+  - enabled: 1
+    path: Assets/Scenes/SNES Mario Circuit 3.unity
+    guid: df5f8d7c847881d4f9790ad70d0bde80
+  - enabled: 1
+    path: Assets/Scenes/TLOZ-temple.unity
+    guid: f66e2cd1eedd02e4c86d6cc9d2157b59
   m_configObjects: {}

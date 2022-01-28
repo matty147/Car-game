@@ -8,6 +8,9 @@ public class Carcontrols2 : MonoBehaviour
 
     public float forwardaccel = 8f , reverseAccel = 4f, macSpeed = 50f , turnStrength = 180 , gravityForce = 10f, dragOnGround =3f;
 
+    public float Default; // change in all DragChanger(Defult + DragChanged)
+    public float DragChanged;
+
     private float speedInput, turnInput;
 
     private bool grounded;
@@ -15,7 +18,8 @@ public class Carcontrols2 : MonoBehaviour
     public LayerMask whatIsGround;
     public float groundRayLength = .5f;
     public Transform groundRayPoint;
-    public float defultRotation = 0;
+    public float TurnMod;
+    private float TurnDef;
 
     public Transform leftFrontWheel, rightFrontWheel;
     public float maxWheelTurn = 25f; 
@@ -24,6 +28,7 @@ public class Carcontrols2 : MonoBehaviour
     void Start()
     {
         theRB.transform.parent = null;
+        TurnDef = turnStrength;
     }
 
     // Update is called once per frame
@@ -52,20 +57,29 @@ public class Carcontrols2 : MonoBehaviour
         rightFrontWheel.localRotation = Quaternion.Euler(rightFrontWheel.localRotation.eulerAngles.x, turnInput * maxWheelTurn, rightFrontWheel.localRotation.eulerAngles.z);
     }
 
-    
+
 
     private void FixedUpdate()
     {
         grounded = false;
         RaycastHit hit;
 
-        if  (Physics.Raycast(groundRayPoint.position, -transform.up, out hit, groundRayLength, whatIsGround))
+        if (Physics.Raycast(groundRayPoint.position, -transform.up, out hit, groundRayLength, whatIsGround))
         {
-            grounded = true;
+            if (theRB.drag == DragChanged)
+            {
+                dragOnGround = DragChanged;
+                turnStrength = TurnMod;
+            }
+            else
+            {
+                dragOnGround = Default;
+                turnStrength = TurnDef;
+            }
 
+            grounded = true;
             transform.rotation = Quaternion.FromToRotation(transform.up, hit.normal) * transform.rotation;
         }
-       
         if (grounded)
         {
             theRB.drag = dragOnGround;

@@ -10,7 +10,9 @@ public class SceeneManager : MonoBehaviour
     private static readonly List<string> Maps = new List<string>()
     {
         "maintrack",
-        "luigi's circuit"
+        "luigi's circuit",
+        "SNES Mario Circuit 3",
+        "TLOZ-temple"
     };
 
 
