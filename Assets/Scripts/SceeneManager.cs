@@ -11,8 +11,7 @@ public class SceeneManager : MonoBehaviour
     {
         "maintrack",
         "luigi's circuit",
-        "SNES Mario Circuit 3",
-        "TLOZ-temple"
+        "maintrack2"
     };
 
 
