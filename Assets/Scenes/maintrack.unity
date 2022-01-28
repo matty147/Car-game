@@ -11122,9 +11122,33 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6567982286567281405, guid: 9bf8598fe7c6aff4b838df2a96d7011c, type: 3}
+      propertyPath: Default
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6567982286567281405, guid: 9bf8598fe7c6aff4b838df2a96d7011c, type: 3}
+      propertyPath: TurnMod
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 6567982286567281405, guid: 9bf8598fe7c6aff4b838df2a96d7011c, type: 3}
+      propertyPath: DragChanged
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6567982286812819966, guid: 9bf8598fe7c6aff4b838df2a96d7011c, type: 3}
       propertyPath: m_TagString
       value: Player2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6567982286938843752, guid: 9bf8598fe7c6aff4b838df2a96d7011c, type: 3}
+      propertyPath: Default
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6567982286938843752, guid: 9bf8598fe7c6aff4b838df2a96d7011c, type: 3}
+      propertyPath: TurnMod
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 6567982286938843752, guid: 9bf8598fe7c6aff4b838df2a96d7011c, type: 3}
+      propertyPath: DragChanged
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6567982286971704344, guid: 9bf8598fe7c6aff4b838df2a96d7011c, type: 3}
       propertyPath: m_Name
