@@ -17,6 +17,25 @@ public class MainMenu : MonoBehaviour
         Application.Quit();
     }
 
+    public void Player1()
+    {
+        Debug.Log("P1");
+    }
+
+    public void Player2()
+    {
+        Debug.Log("P2");
+    }
+
+    public void Player3()
+    {
+        Debug.Log("P3");
+    }
+
+    public void Player4()
+    {
+        Debug.Log("P4");
+    }
 
 
 
