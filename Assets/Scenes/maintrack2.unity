@@ -3448,6 +3448,7 @@ GameObject:
   - component: {fileID: 1098889512}
   - component: {fileID: 1098889513}
   - component: {fileID: 1098889514}
+  - component: {fileID: 1098889515}
   m_Layer: 0
   m_Name: Scene Manager
   m_TagString: Untagged
@@ -3496,6 +3497,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pause: 112
+--- !u!114 &1098889515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1098889511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30bdb10df62de77428ba53e80cec8020, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1102635651 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 9a598df068fbe2043a300e9dafd5bb7f, type: 3}
@@ -6965,9 +6978,9 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player3
       objectReference: {fileID: 0}
-    - target: {fileID: 6567982286567281344, guid: 9bf8598fe7c6aff4b838df2a96d7011c, type: 3}
+    - target: {fileID: 0}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6567982286567281405, guid: 9bf8598fe7c6aff4b838df2a96d7011c, type: 3}
       propertyPath: Default
