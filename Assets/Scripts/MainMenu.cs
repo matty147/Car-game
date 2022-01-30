@@ -34,7 +34,17 @@ public class MainMenu : MonoBehaviour
 
     public void Player4()
     {
-        Debug.Log("P4");
+        Debug.Log("P4   ");
+    }
+    
+    public void Mapmaintrack()
+    {
+        SceneManager.LoadScene("maintrack");
+    }
+
+    public void Mapmaintrack2()
+    {
+        SceneManager.LoadScene("maintrack2");
     }
 
 

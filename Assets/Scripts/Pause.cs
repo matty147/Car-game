@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Pause : MonoBehaviour
 {
     [SerializeField]
     KeyCode pause;
 
+    [SerializeField]
+    KeyCode menu;
     private float StopTime;
 
     private void Start()
@@ -16,6 +19,11 @@ public class Pause : MonoBehaviour
 
     private void Update()
     {
+        if (Input.GetKeyDown(menu))
+        {
+            SceneManager.LoadScene("Menu");
+        }
+
         if (Input.GetKeyDown(pause))
         {
             StopTime++ ;
