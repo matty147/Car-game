@@ -2,19 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Carswitch : MonoBehaviour
+public class GameInit : MonoBehaviour
 {
-    private int ActivePlayers = 1;
-
-   // [SerializeField]
-   // KeyCode AllOff;
-
-    [SerializeField]
-    KeyCode Plus;
-
-    [SerializeField]
-    KeyCode Minus;
-
     private Camera getCam(int idx)
     {
         //Debug.Log($"Camera: 'Cam{idx}'");
@@ -64,7 +53,7 @@ public class Carswitch : MonoBehaviour
 
     void UpdateActivePlayers()
     {
-        switch (ActivePlayers)
+        switch (MainMenu.NumberOfPlayers)
         {
             case 1:
                 Debug.Log($"1");
@@ -111,7 +100,7 @@ public class Carswitch : MonoBehaviour
                 Debug.Log($"4");
                 break;
             default:
-                Debug.LogError($"Wrong number of players {ActivePlayers}.");
+                Debug.LogError($"Wrong number of players {MainMenu.NumberOfPlayers}.");
                 break;
         }
     }
@@ -121,36 +110,7 @@ public class Carswitch : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       
-        ActivePlayers = 1;
         UpdateActivePlayers();
     }
-
-    // Update is called once per frame
-    void FixedUpdate()
-    {
-       
-            if (Input.GetKeyDown(Plus))
-            {
-                if (ActivePlayers < 4)
-                {
-                    ActivePlayers++;
-                    UpdateActivePlayers();
-                    
-                }
-
-            }
-            if (Input.GetKeyDown    (Minus))
-            {
-                if (ActivePlayers > 1)
-                {
-                    ActivePlayers--;
-                    UpdateActivePlayers();
-                    
-                }
-            }
-        
-    }
-
 
 }

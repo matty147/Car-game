@@ -3446,7 +3446,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1098889512}
-  - component: {fileID: 1098889513}
   - component: {fileID: 1098889514}
   - component: {fileID: 1098889515}
   m_Layer: 0
@@ -3470,20 +3469,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1098889513
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1098889511}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0aa8f2654d1a744cabd8681ae415ad8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PrevMap: 282
-  NextMap: 283
 --- !u!114 &1098889514
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3497,6 +3482,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pause: 112
+  menu: 0
 --- !u!114 &1098889515
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6977,10 +6963,6 @@ PrefabInstance:
     - target: {fileID: 6567982286290763387, guid: 9bf8598fe7c6aff4b838df2a96d7011c, type: 3}
       propertyPath: m_TagString
       value: Player3
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_Enabled
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6567982286567281405, guid: 9bf8598fe7c6aff4b838df2a96d7011c, type: 3}
       propertyPath: Default
