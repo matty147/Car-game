@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Carcontrols1 : MonoBehaviour
 {
-     public Rigidbody theRB;
+    public Rigidbody theRB;
 
     public float forwardaccel = 8f , reverseAccel = 4f, macSpeed = 50f , turnStrength = 180 , gravityForce = 10f, dragOnGround =3f;
 
@@ -51,7 +51,7 @@ public class Carcontrols1 : MonoBehaviour
         //{
             transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles + new Vector3(0f, turnInput * turnStrength * Time.deltaTime/* * Input.GetAxis("Vertical")*/, 0f));
        // }       
-    transform.position = theRB.transform.position;
+        transform.position = theRB.transform.position;
     
         leftFrontWheel.localRotation = Quaternion.Euler(leftFrontWheel.localRotation.eulerAngles.x, (turnInput * maxWheelTurn) - 180, leftFrontWheel.localRotation.eulerAngles.z);
         rightFrontWheel.localRotation = Quaternion.Euler(rightFrontWheel.localRotation.eulerAngles.x, turnInput * maxWheelTurn, rightFrontWheel.localRotation.eulerAngles.z);
@@ -83,7 +83,7 @@ public class Carcontrols1 : MonoBehaviour
        
         if (grounded)
         {
-                theRB.drag = dragOnGround;               
+            theRB.drag = dragOnGround;               
             if (Mathf.Abs(speedInput) > 0)
             {
                 theRB.AddForce(transform.forward * speedInput);
