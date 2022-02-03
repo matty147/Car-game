@@ -5,9 +5,9 @@ using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
 {
-   static public float time = 0.0f;
+
+    static public float time = 0.0f;
     public Text timer;
-    public float counter;
     void Update()
     {
         time += Time.deltaTime;

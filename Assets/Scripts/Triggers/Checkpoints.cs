@@ -7,7 +7,8 @@ public class Checkpoints : MonoBehaviour
     //    private static int[] PlayerStatus = new int[] { 0, 0, 0, 0 };
     
     public static readonly int CHECKPOINT_COUNT = 3;
-
+    private int Curentx, Curenty, Curntz;
+    public int Checkpointx, Checkpointy, Checkpointz;
     private static int[] PlayerStatus = new int[] { 0, 0, 0, 0 };
 
     [SerializeField]
@@ -50,12 +51,13 @@ public class Checkpoints : MonoBehaviour
     {
         if (newCheckpoint == 1)
         {
+            Debug.Log($"<color=blue>Time:{Timer.time}</color>");
             return currentCheckpoint == 0 || currentCheckpoint == CHECKPOINT_COUNT;
-            //Debug.Log(time); from timer
         }
         else
         {
             return newCheckpoint == currentCheckpoint + 1;
+            //last checkpoint set the spawn position
         }
     }
 }

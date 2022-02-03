@@ -52,7 +52,10 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene("maintrack2");
     }
 
-
+    public void Mapmaintrack3()
+    {
+        SceneManager.LoadScene("maintrack3");
+    }
 
 
 }

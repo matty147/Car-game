@@ -2526,10 +2526,7 @@ MonoBehaviour:
   x: 23.72
   y: 0.5
   z: 43.2
-  theRB1: {fileID: 12654345}
-  theRB2: {fileID: 663068250}
-  theRB3: {fileID: 761077231}
-  theRB4: {fileID: 921072294}
+  rotationY: 0
 --- !u!65 &864426710
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4529,6 +4526,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68f2c240e09adc94caa712c95d5be691, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Checkpointx: 0
+  Checkpointy: 0
+  Checkpointz: 0
   CheckpointNumber: 2
 --- !u!65 &1493094029
 BoxCollider:
@@ -5316,6 +5316,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68f2c240e09adc94caa712c95d5be691, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Checkpointx: 0
+  Checkpointy: 0
+  Checkpointz: 0
   CheckpointNumber: 1
 --- !u!1001 &1677187950
 PrefabInstance:
@@ -5681,6 +5684,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68f2c240e09adc94caa712c95d5be691, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Checkpointx: 0
+  Checkpointy: 0
+  Checkpointz: 0
   CheckpointNumber: 3
 --- !u!65 &1748820720
 BoxCollider:

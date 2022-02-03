@@ -86,7 +86,7 @@ public class Carcontrols1 : MonoBehaviour
             theRB.drag = dragOnGround;               
             if (Mathf.Abs(speedInput) > 0)
             {
-                theRB.AddForce(transform.forward * speedInput);
+                theRB.AddForce(transform.forward * speedInput); //*var (0/1)
             }
         } 
         else
