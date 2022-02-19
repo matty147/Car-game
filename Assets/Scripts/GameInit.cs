@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameInit : MonoBehaviour
 {
@@ -48,7 +49,20 @@ public class GameInit : MonoBehaviour
 
     private void placeCamera(int idx, Placement placement)
     {
-        getCam(idx).rect = placementRect(placement);
+        var camera = getCam(idx);
+        camera.rect = placementRect(placement);
+        /*        GameObject newGO = new GameObject("myTextGO");
+                ngo.transform.SetParent(this.transform);
+        */
+        // var canvas = GameObject.FindGameObjectWithTag("mainCanvas").GetComponent<Canvas>();
+        GameObject canvasGO = new GameObject();
+
+
+        // GameObject gameObject = new GameObject("Child");
+        // gameObject.transform.SetParent(canvas.transform);
+
+        // gameObject.AddComponent<Text>().text = "Hello This is Child";
+        // gameObject.GetComponent<Text>().font = Resources.GetBuiltinResource(typeof(Font), "Arial.ttf") as Font;
     }
 
     void UpdateActivePlayers()

@@ -5,9 +5,13 @@ using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
 {
-
     static public float time = 0.0f;
     public Text timer;
+
+    private void Awake()
+    {
+        time = 0.0f;
+    }
     void Update()
     {
         time += Time.deltaTime;

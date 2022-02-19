@@ -2587,7 +2587,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 66b2596e76776954b8bc7aeba3c826a5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 222.8264
+      value: 222.15916
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 66b2596e76776954b8bc7aeba3c826a5, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2631,6 +2631,25 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66b2596e76776954b8bc7aeba3c826a5, type: 3}
+--- !u!1 &409863562 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 66b2596e76776954b8bc7aeba3c826a5, type: 3}
+  m_PrefabInstance: {fileID: 408786402}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &409863563
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 409863562}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2332861813427305680, guid: 66b2596e76776954b8bc7aeba3c826a5, type: 3}
 --- !u!1001 &411599997
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4073,7 +4092,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 2.112215e-39, y: NaN, z: 0, w: 10.927536}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -4086,7 +4105,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 705507993}
   m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalPosition: {x: 0, y: 24, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -5990,7 +6009,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: {fileID: 2061269905}
-  counter: 0
 --- !u!114 &1098889514
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6004,7 +6022,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pause: 112
-  menu: 0
+  menu: 109
 --- !u!114 &1098889515
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8139,6 +8157,7 @@ MonoBehaviour:
   Checkpointx: 0
   Checkpointy: 0
   Checkpointz: 0
+  Lap: {fileID: 0}
   CheckpointNumber: 2
 --- !u!65 &1493094029
 BoxCollider:
@@ -9068,6 +9087,7 @@ MonoBehaviour:
   Checkpointx: 0
   Checkpointy: 10
   Checkpointz: 0
+  Lap: {fileID: 0}
   CheckpointNumber: 1
 --- !u!1 &1679950879
 GameObject:
@@ -9321,7 +9341,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1748820718
 Transform:
   m_ObjectHideFlags: 0
@@ -9329,13 +9349,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1748820717}
-  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -214.32, y: 124.88, z: -424.19}
-  m_LocalScale: {x: 13, y: 13, z: 2}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 127.94833, y: 143, z: -393.2305}
+  m_LocalScale: {x: 15, y: 15, z: 2}
   m_Children: []
   m_Father: {fileID: 162530826}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1748820719
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9351,6 +9371,7 @@ MonoBehaviour:
   Checkpointx: 0
   Checkpointy: 0
   Checkpointz: 0
+  Lap: {fileID: 0}
   CheckpointNumber: 3
 --- !u!65 &1748820720
 BoxCollider:
@@ -10657,6 +10678,10 @@ PrefabInstance:
     - target: {fileID: 5306579874698867766, guid: 12495f4cfac27234288aa0de0953b0ca, type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 5306579874698867766, guid: 12495f4cfac27234288aa0de0953b0ca, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 12495f4cfac27234288aa0de0953b0ca, type: 3}

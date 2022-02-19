@@ -1,16 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Checkpoints : MonoBehaviour
 {
-    //    private static int[] PlayerStatus = new int[] { 0, 0, 0, 0 };
-    
+    // todo make it possible for maps to have differrent number of checkpoints
+
     public static readonly int CHECKPOINT_COUNT = 3;
     private int Curentx, Curenty, Curntz;
     public int Checkpointx, Checkpointy, Checkpointz;
+    private static int[] PlayerLap = new int[] { 0, 0, 0, 0 };
     private static int[] PlayerStatus = new int[] { 0, 0, 0, 0 };
-
+    public Text Lap;
     [SerializeField]
     int CheckpointNumber;
 
@@ -28,6 +30,12 @@ public class Checkpoints : MonoBehaviour
         {
             PlayerStatus[playerIdx] = newCheckpoint;
             Debug.Log($"Checkpoint OK: player={playerTag}, checkpoint={currentCheckpoint} > {newCheckpoint}");
+            if (currentCheckpoint == CHECKPOINT_COUNT && newCheckpoint == 1) 
+            {
+                PlayerLap[playerIdx]++;
+                Debug.Log($"<color=red>Lap: player {playerTag} lap={PlayerLap[playerIdx]+1}</color>");
+                
+            }
         }
         else
         {
@@ -59,5 +67,10 @@ public class Checkpoints : MonoBehaviour
             return newCheckpoint == currentCheckpoint + 1;
             //last checkpoint set the spawn position
         }
+    }
+
+    public void Update()
+    {
+       // Lap.text = Lap.ToString("0.0000");
     }
 }

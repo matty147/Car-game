@@ -9,6 +9,7 @@ TagManager:
   - Player3
   - Player4
   - Player1car
+  - mainCanvas
   layers:
   - Default
   - TransparentFX
@@ -16,10 +17,10 @@ TagManager:
   - Ground
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
+  - 1
+  - 2
+  - 3
+  - 4
   - 
   - 
   - 
