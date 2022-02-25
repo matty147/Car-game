@@ -2,17 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Carcontrols1 : MonoBehaviour
+public class mainCarcontrols : MonoBehaviour
 {
-    /*
+    public int PlayerNmb;
+
     public Rigidbody theRB;
 
     public float forwardaccel = 8f , reverseAccel = 4f, macSpeed = 50f , turnStrength = 180 , gravityForce = 10f, dragOnGround =3f;
 
+    //Player nmb for the controls
+    
     public float Default; // change in all DragChanger(Defult + DragChanged)
     public float DragChanged;
 
-    private float speedInput, turnInput;
+    private float speedInput;
 
     private bool grounded;
 
@@ -32,32 +35,40 @@ public class Carcontrols1 : MonoBehaviour
         TurnDef = turnStrength;
     }
 
+    void Awake()
+    {
+        Debug.Log($"{PlayerNmb}");
+        //make all a = all preset var;
+        //macSpeed = macSpeed;        
+    }
     // Update is called once per frame
     void Update()
     {
+        var vertical = Input.GetAxis($"Vertical{PlayerNmb}");
+        var turnInput = Input.GetAxis($"Horizontal{PlayerNmb}");
+        //Debug.Log($"{PlayerNmb},{vertical},{turnInput}");
         speedInput = 0f;
-        if (Input.GetAxis("Vertical1") > 0)
+        if (vertical > 0)
         {
-            speedInput = Input.GetAxis("Vertical1") * forwardaccel * 1000f;
+            speedInput = vertical * forwardaccel * 1000f;
         }
-        
-        else if (Input.GetAxis("Vertical1") < 0)
+        else if (vertical < 0)
         {
-            speedInput = Input.GetAxis("Vertical1") * reverseAccel * 1000f;
+            speedInput = vertical * reverseAccel * 1000f;
         }
-
-        turnInput = Input.GetAxis("Horizontal1");
 
        // if (grounded)
         //{
-            transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles + new Vector3(0f, turnInput * turnStrength * Time.deltaTime), 0f)); // Input.GetAxis("Vertical"
+            transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles + new Vector3(0f, turnInput * turnStrength * Time.deltaTime/* * Input.GetAxis("Vertical1")*/, 0f));
        // }       
-       // transform.position = theRB.transform.position;
+        transform.position = theRB.transform.position;
     
-      leftFrontWheel.localRotation = Quaternion.Euler(leftFrontWheel.localRotation.eulerAngles.x, (turnInput * maxWheelTurn) - 180, leftFrontWheel.localRotation.eulerAngles.z);
-       rightFrontWheel.localRotation = Quaternion.Euler(rightFrontWheel.localRotation.eulerAngles.x, turnInput * maxWheelTurn, rightFrontWheel.localRotation.eulerAngles.z);
+        leftFrontWheel.localRotation = Quaternion.Euler(leftFrontWheel.localRotation.eulerAngles.x, (turnInput * maxWheelTurn) - 180, leftFrontWheel.localRotation.eulerAngles.z);
+        rightFrontWheel.localRotation = Quaternion.Euler(rightFrontWheel.localRotation.eulerAngles.x, turnInput * maxWheelTurn, rightFrontWheel.localRotation.eulerAngles.z);
     }
-  
+
+    
+
     private void FixedUpdate()
     {
         grounded = false;
@@ -79,7 +90,6 @@ public class Carcontrols1 : MonoBehaviour
             grounded = true;
             transform.rotation = Quaternion.FromToRotation(transform.up, hit.normal) * transform.rotation;
         }
-    
        
         if (grounded)
         {
@@ -95,5 +105,4 @@ public class Carcontrols1 : MonoBehaviour
             theRB.AddForce(Vector3.up * -gravityForce * 100f);
         }
     }
-    */
 }

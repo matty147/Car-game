@@ -4751,8 +4751,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.22975294, y: -0, z: -0, w: 0.973249}
-  m_LocalPosition: {x: 0, y: 5, z: -10}
+  m_LocalRotation: {x: -0.15875655, y: 0.6669412, z: -0.14977346, w: -0.7124281}
+  m_LocalPosition: {x: 7.608834, y: 4.102596, z: 5.2935686}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5006512736312431453}
@@ -9162,7 +9162,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1679950880
 Transform:
   m_ObjectHideFlags: 0
@@ -9931,7 +9931,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8296172668223873358}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d3f3abc3ce0140e47b936a7e8f913cab, type: 3}
   m_Name: 
@@ -13983,6 +13983,7 @@ GameObject:
   - component: {fileID: 5006512736312431453}
   - component: {fileID: 1809947165}
   - component: {fileID: 1809947167}
+  - component: {fileID: 8296172668223873359}
   m_Layer: 0
   m_Name: Player1
   m_TagString: Untagged
@@ -13990,6 +13991,37 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &8296172668223873359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8296172668223873358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 815423c47ddf9c546b6fa7223bff5c03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerNmb: 1
+  theRB: {fileID: 1141379674}
+  forwardaccel: 8
+  reverseAccel: 4
+  macSpeed: 50
+  turnStrength: 180
+  gravityForce: 10
+  dragOnGround: 3
+  Default: 3
+  DragChanged: 2
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 8
+  groundRayLength: 0.5
+  groundRayPoint: {fileID: 816218866}
+  TurnMod: 0
+  leftFrontWheel: {fileID: 4699993055337432711}
+  rightFrontWheel: {fileID: 5228416444181419833}
+  maxWheelTurn: 25
 --- !u!1 &8296172669207593985
 GameObject:
   m_ObjectHideFlags: 0
