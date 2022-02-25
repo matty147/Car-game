@@ -304,20 +304,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 10.000002, y: 1.312, z: 1.2300003}
   m_Center: {x: 4.9999933, y: 0.656, z: 0.6150006}
---- !u!64 &23272714
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8296172669207593985}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
 --- !u!114 &23272716
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -325,7 +311,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8296172669207593985}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b4f8dec111a29ca45ab0ee328a2ba5b9, type: 3}
   m_Name: 
@@ -5604,6 +5590,7 @@ GameObject:
   - component: {fileID: 1098889514}
   - component: {fileID: 1098889515}
   - component: {fileID: 1098889513}
+  - component: {fileID: 1098889516}
   m_Layer: 0
   m_Name: Scene Manager
   m_TagString: Untagged
@@ -5664,20 +5651,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pause: 112
   menu: 109
---- !u!64 &1108025990
-MeshCollider:
+--- !u!114 &1098889516
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8296172668076718989}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_GameObject: {fileID: 1098889511}
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c20669fe4de3db542aff664ffe07d88b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  forwardaccel: 8
+  reverseAccel: 4
+  macSpeed: 50
+  turnStrength: 180
+  gravityForce: 10
+  dragOnGround: 3
+  Default: 3
+  DragChanged: 2
+  groundRayLength: 0.5
+  TurnMod: 0
+  maxWheelTurn: 25
 --- !u!114 &1108025992
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5685,7 +5681,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8296172668076718989}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d08e1b364ca5f22428b811d93f7d4d28, type: 3}
   m_Name: 
@@ -11791,20 +11787,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 5a6da52f0f284984f94818781ebb09f6, type: 3}
   m_PrefabInstance: {fileID: 2051541709}
   m_PrefabAsset: {fileID: 0}
---- !u!64 &2055096590
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8296172667681181701}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
 --- !u!114 &2055096592
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11812,7 +11794,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8296172667681181701}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: de47eaf153753dd46abbc722778b91d2, type: 3}
   m_Name: 
@@ -13925,9 +13907,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5006512736858268182}
-  - component: {fileID: 2055096590}
   - component: {fileID: 2055096592}
   - component: {fileID: 2055096593}
+  - component: {fileID: 8296172667681181702}
   m_Layer: 0
   m_Name: Player4
   m_TagString: Player4
@@ -13935,6 +13917,37 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &8296172667681181702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8296172667681181701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 815423c47ddf9c546b6fa7223bff5c03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerNmb: 4
+  theRB: {fileID: 0}
+  forwardaccel: 8
+  reverseAccel: 4
+  macSpeed: 50
+  turnStrength: 180
+  gravityForce: 10
+  dragOnGround: 3
+  Default: 3
+  DragChanged: 2
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 8
+  groundRayLength: 0.5
+  groundRayPoint: {fileID: 1086678449}
+  TurnMod: 180
+  leftFrontWheel: {fileID: 4699993054806292428}
+  rightFrontWheel: {fileID: 5228416443649255026}
+  maxWheelTurn: 25
 --- !u!1 &8296172668076718989
 GameObject:
   m_ObjectHideFlags: 0
@@ -13944,9 +13957,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5006512735913150878}
-  - component: {fileID: 1108025990}
   - component: {fileID: 1108025992}
   - component: {fileID: 1108025993}
+  - component: {fileID: 8296172668076718990}
   m_Layer: 0
   m_Name: Player2
   m_TagString: Player2
@@ -13954,6 +13967,37 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &8296172668076718990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8296172668076718989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 815423c47ddf9c546b6fa7223bff5c03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerNmb: 2
+  theRB: {fileID: 0}
+  forwardaccel: 8
+  reverseAccel: 4
+  macSpeed: 50
+  turnStrength: 180
+  gravityForce: 10
+  dragOnGround: 3
+  Default: 3
+  DragChanged: 2
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 8
+  groundRayLength: 0.5
+  groundRayPoint: {fileID: 669191245}
+  TurnMod: 18
+  leftFrontWheel: {fileID: 4699993054948187204}
+  rightFrontWheel: {fileID: 5228416443790593530}
+  maxWheelTurn: 25
 --- !u!1 &8296172668223873358
 GameObject:
   m_ObjectHideFlags: 0
@@ -14013,9 +14057,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5006512734795904530}
-  - component: {fileID: 23272714}
   - component: {fileID: 23272716}
   - component: {fileID: 23272717}
+  - component: {fileID: 8296172669207593986}
   m_Layer: 0
   m_Name: Player3
   m_TagString: Player3
@@ -14023,6 +14067,37 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &8296172669207593986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8296172669207593985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 815423c47ddf9c546b6fa7223bff5c03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerNmb: 3
+  theRB: {fileID: 0}
+  forwardaccel: 8
+  reverseAccel: 4
+  macSpeed: 50
+  turnStrength: 180
+  gravityForce: 10
+  dragOnGround: 3
+  Default: 3
+  DragChanged: 2
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 8
+  groundRayLength: 0.5
+  groundRayPoint: {fileID: 1338310602}
+  TurnMod: 180
+  leftFrontWheel: {fileID: 4699993055998337992}
+  rightFrontWheel: {fileID: 5228416442727871094}
+  maxWheelTurn: 25
 --- !u!1 &8515039777337358503
 GameObject:
   m_ObjectHideFlags: 0
