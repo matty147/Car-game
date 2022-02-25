@@ -46,12 +46,17 @@ public class mainCarcontrols : MonoBehaviour
     {
         var vertical = Input.GetAxis($"Vertical{PlayerNmb}");
         var turnInput = Input.GetAxis($"Horizontal{PlayerNmb}");
-        //Debug.Log($"{PlayerNmb},{vertical},{turnInput}");
+        /*
+        if (PlayerNmb == 2)
+        {
+            Debug.Log($"{PlayerNmb},{vertical},{turnInput}");
+        }
+        */
         speedInput = 0f;
         if (vertical > 0)
         {
             speedInput = vertical * forwardaccel * 1000f;
-        }
+        }   
         else if (vertical < 0)
         {
             speedInput = vertical * reverseAccel * 1000f;
