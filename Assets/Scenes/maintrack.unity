@@ -9936,24 +9936,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3f3abc3ce0140e47b936a7e8f913cab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  theRB: {fileID: 1141379674}
-  forwardaccel: 8
-  reverseAccel: 4
-  macSpeed: 50
-  turnStrength: 180
-  gravityForce: 10
-  dragOnGround: 3
-  Default: 3
-  DragChanged: 2
-  whatIsGround:
-    serializedVersion: 2
-    m_Bits: 8
-  groundRayLength: 0.5
-  groundRayPoint: {fileID: 816218866}
-  TurnMod: 180
-  leftFrontWheel: {fileID: 4699993055337432711}
-  rightFrontWheel: {fileID: 5228416444181419833}
-  maxWheelTurn: 25
 --- !u!114 &1809947167
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10154,8 +10136,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_HorizontalAxis: Horizontal
-  m_VerticalAxis: Vertical
+  m_HorizontalAxis: Horizontal1
+  m_VerticalAxis: Vertical1
   m_SubmitButton: Submit
   m_CancelButton: Cancel
   m_InputActionsPerSecond: 10
@@ -14018,7 +14000,7 @@ MonoBehaviour:
     m_Bits: 8
   groundRayLength: 0.5
   groundRayPoint: {fileID: 816218866}
-  TurnMod: 0
+  TurnMod: 180
   leftFrontWheel: {fileID: 4699993055337432711}
   rightFrontWheel: {fileID: 5228416444181419833}
   maxWheelTurn: 25
