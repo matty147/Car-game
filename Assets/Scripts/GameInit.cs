@@ -71,10 +71,10 @@ public class GameInit : MonoBehaviour
         {
             case 1:
                 Debug.Log($"1");
-                GameObject.Find("Player1").GetComponent<Carcontrols1>().enabled = true; //on
-                GameObject.Find("Player2").GetComponent<Carcontrols2>().enabled = false; //off
-                GameObject.Find("Player3").GetComponent<Carcontrols3>().enabled = false; //off
-                GameObject.Find("Player4").GetComponent<Carcontrols4>().enabled = false; //off
+                GameObject.Find("Player1").GetComponent<mainCarcontrols>().enabled = true; //on
+                GameObject.Find("Player2").GetComponent<mainCarcontrols>().enabled = false; //off
+                GameObject.Find("Player3").GetComponent<mainCarcontrols>().enabled = false; //off
+                GameObject.Find("Player4").GetComponent<mainCarcontrols>().enabled = false; //off
                 placeCamera(1, Placement.Full);
                 placeCamera(2, Placement.Off);
                 placeCamera(3, Placement.Off);
@@ -82,10 +82,10 @@ public class GameInit : MonoBehaviour
                 break;
             case 2:
                 Debug.Log($"2");
-                GameObject.Find("Player1").GetComponent<Carcontrols1>().enabled = true; //on
-                GameObject.Find("Player2").GetComponent<Carcontrols2>().enabled = true; //on
-                GameObject.Find("Player3").GetComponent<Carcontrols3>().enabled = false; //off
-                GameObject.Find("Player4").GetComponent<Carcontrols4>().enabled = false; //off
+                GameObject.Find("Player1").GetComponent<mainCarcontrols>().enabled = true; //on
+                GameObject.Find("Player2").GetComponent<mainCarcontrols>().enabled = true; //on
+                GameObject.Find("Player3").GetComponent<mainCarcontrols>().enabled = false; //off
+                GameObject.Find("Player4").GetComponent<mainCarcontrols>().enabled = false; //off
                 placeCamera(1, Placement.Top);
                 placeCamera(2, Placement.Bottom);
                 placeCamera(3, Placement.Off);
@@ -93,20 +93,20 @@ public class GameInit : MonoBehaviour
                 break;
             case 3:
                 Debug.Log($"3");
-                GameObject.Find("Player1").GetComponent<Carcontrols1>().enabled = true; //on
-                GameObject.Find("Player2").GetComponent<Carcontrols2>().enabled = true; //on
-                GameObject.Find("Player3").GetComponent<Carcontrols3>().enabled = true; //on
-                GameObject.Find("Player4").GetComponent<Carcontrols4>().enabled = false; //off
+                GameObject.Find("Player1").GetComponent<mainCarcontrols>().enabled = true; //on
+                GameObject.Find("Player2").GetComponent<mainCarcontrols>().enabled = true; //on
+                GameObject.Find("Player3").GetComponent<mainCarcontrols>().enabled = true; //on
+                GameObject.Find("Player4").GetComponent<mainCarcontrols>().enabled = false; //off
                 placeCamera(1, Placement.TopLeft);
                 placeCamera(2, Placement.TopRight);
                 placeCamera(3, Placement.BottomLeft);
                 placeCamera(4, Placement.BottomRight);
                 break;
             case 4:
-                GameObject.Find("Player1").GetComponent<Carcontrols1>().enabled = true;//on
-                GameObject.Find("Player2").GetComponent<Carcontrols2>().enabled = true;//on
-                GameObject.Find("Player3").GetComponent<Carcontrols3>().enabled = true;//on
-                GameObject.Find("Player4").GetComponent<Carcontrols4>().enabled = true;//on
+                GameObject.Find("Player1").GetComponent<mainCarcontrols>().enabled = true;//on
+                GameObject.Find("Player2").GetComponent<mainCarcontrols>().enabled = true;//on
+                GameObject.Find("Player3").GetComponent<mainCarcontrols>().enabled = true;//on
+                GameObject.Find("Player4").GetComponent<mainCarcontrols>().enabled = true;//on
                 placeCamera(1, Placement.TopLeft);
                 placeCamera(2, Placement.TopRight);
                 placeCamera(3, Placement.BottomLeft);

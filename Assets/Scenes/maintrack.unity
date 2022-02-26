@@ -304,34 +304,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 10.000002, y: 1.312, z: 1.2300003}
   m_Center: {x: 4.9999933, y: 0.656, z: 0.6150006}
---- !u!114 &23272716
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8296172669207593985}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4f8dec111a29ca45ab0ee328a2ba5b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  theRB: {fileID: 460076701}
-  forwardaccel: 8
-  reverseAccel: 4
-  macSpeed: 50
-  turnStrength: 180
-  gravityForce: 10
-  dragOnGround: 3
-  whatIsGround:
-    serializedVersion: 2
-    m_Bits: 8
-  groundRayLength: 0.5
-  groundRayPoint: {fileID: 1338310602}
-  defultRotation: 0
-  leftFrontWheel: {fileID: 4699993055998337992}
-  rightFrontWheel: {fileID: 5228416442727871094}
-  maxWheelTurn: 25
 --- !u!114 &23272717
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5674,36 +5646,6 @@ MonoBehaviour:
   groundRayLength: 0.5
   TurnMod: 0
   maxWheelTurn: 25
---- !u!114 &1108025992
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8296172668076718989}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d08e1b364ca5f22428b811d93f7d4d28, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  theRB: {fileID: 2056141088}
-  forwardaccel: 8
-  reverseAccel: 4
-  macSpeed: 50
-  turnStrength: 150
-  gravityForce: 10
-  dragOnGround: 3
-  Default: 3
-  DragChanged: 3
-  whatIsGround:
-    serializedVersion: 2
-    m_Bits: 8
-  groundRayLength: 0.5
-  groundRayPoint: {fileID: 669191245}
-  TurnMod: 180
-  leftFrontWheel: {fileID: 4699993054948187204}
-  rightFrontWheel: {fileID: 5228416443790593530}
-  maxWheelTurn: 25
 --- !u!114 &1108025993
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9920,18 +9862,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 10.000002, y: 1.312, z: 1.2300003}
   m_Center: {x: 4.9999933, y: 0.656, z: 0.6150011}
---- !u!114 &1809947165
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8296172668223873358}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3f3abc3ce0140e47b936a7e8f913cab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1809947167
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11787,34 +11717,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 5a6da52f0f284984f94818781ebb09f6, type: 3}
   m_PrefabInstance: {fileID: 2051541709}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2055096592
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8296172667681181701}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de47eaf153753dd46abbc722778b91d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  theRB: {fileID: 736861817}
-  forwardaccel: 8
-  reverseAccel: 4
-  macSpeed: 50
-  turnStrength: 180
-  gravityForce: 10
-  dragOnGround: 3
-  whatIsGround:
-    serializedVersion: 2
-    m_Bits: 8
-  groundRayLength: 0.5
-  groundRayPoint: {fileID: 1086678449}
-  defultRotation: 0
-  leftFrontWheel: {fileID: 4699993054806292428}
-  rightFrontWheel: {fileID: 5228416443649255026}
-  maxWheelTurn: 25
 --- !u!114 &2055096593
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13907,7 +13809,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5006512736858268182}
-  - component: {fileID: 2055096592}
   - component: {fileID: 2055096593}
   - component: {fileID: 8296172667681181702}
   m_Layer: 0
@@ -13957,7 +13858,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5006512735913150878}
-  - component: {fileID: 1108025992}
   - component: {fileID: 1108025993}
   - component: {fileID: 8296172668076718990}
   m_Layer: 0
@@ -13994,7 +13894,7 @@ MonoBehaviour:
     m_Bits: 8
   groundRayLength: 0.5
   groundRayPoint: {fileID: 669191245}
-  TurnMod: 18
+  TurnMod: 180
   leftFrontWheel: {fileID: 4699993054948187204}
   rightFrontWheel: {fileID: 5228416443790593530}
   maxWheelTurn: 25
@@ -14007,12 +13907,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5006512736312431453}
-  - component: {fileID: 1809947165}
   - component: {fileID: 1809947167}
   - component: {fileID: 8296172668223873359}
   m_Layer: 0
   m_Name: Player1
-  m_TagString: Untagged
+  m_TagString: Player1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14057,7 +13956,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5006512734795904530}
-  - component: {fileID: 23272716}
   - component: {fileID: 23272717}
   - component: {fileID: 8296172669207593986}
   m_Layer: 0
