@@ -48,7 +48,7 @@ public class mainCarcontrols : MonoBehaviour
         var turnInput = Input.GetAxis($"Horizontal{PlayerNmb}");
         /*
         if (PlayerNmb == 2)
-        {
+        {S
             Debug.Log($"{PlayerNmb},{vertical},{turnInput}");
         }
         */
