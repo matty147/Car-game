@@ -4,19 +4,19 @@ using UnityEngine;
 
 public class mainCarcontrols : MonoBehaviour
 {
-    public int PlayerNmb;
-
+    public int playerNmb;
+    //public static int NumberOfPlayers { get; private set; } = 1;
     public Rigidbody theRB;
 
-    public float forwardaccel = 8f , reverseAccel = 4f, macSpeed = 50f , turnStrength = 180 , gravityForce = 10f, dragOnGround =3f;
+    public float forwardAccel = 8f, reverseAccel = 4f, maxSpeed = 50f, turnStrength = 180f, gravityForce = 10f, dragOnGround = 3f;
 
     //Player nmb for the controls
     
-    public float Default; // change in all DragChanger(Defult + DragChanged)
-    public float DragChanged;
+    public float defaultDrag; // change in all DragChanger(Defult + DragChanged)
+    public float dragChanged;
 
     private float speedInput;
-
+    public float boost;
     private bool grounded;
 
     public LayerMask whatIsGround;
@@ -37,15 +37,15 @@ public class mainCarcontrols : MonoBehaviour
 
     void Awake()
     {
-        Debug.Log($"{PlayerNmb}");
+        Debug.Log($"{playerNmb}");
         //make all a = all preset var;
         //macSpeed = macSpeed;        
     }
     // Update is called once per frame
     void Update()
     {
-        var vertical = Input.GetAxis($"Vertical{PlayerNmb}");
-        var turnInput = Input.GetAxis($"Horizontal{PlayerNmb}");
+        var vertical = Input.GetAxis($"Vertical{playerNmb}");
+        var turnInput = Input.GetAxis($"Horizontal{playerNmb}");
         /*
         if (PlayerNmb == 2)
         {S
@@ -55,7 +55,7 @@ public class mainCarcontrols : MonoBehaviour
         speedInput = 0f;
         if (vertical > 0)
         {
-            speedInput = vertical * forwardaccel * 1000f;
+            speedInput = vertical * forwardAccel * 1000f;
         }   
         else if (vertical < 0)
         {
@@ -81,14 +81,14 @@ public class mainCarcontrols : MonoBehaviour
 
         if  (Physics.Raycast(groundRayPoint.position, -transform.up, out hit, groundRayLength, whatIsGround))
         {
-            if (theRB.drag == DragChanged)
+            if (theRB.drag == dragChanged)
             {
-                dragOnGround = DragChanged;
+                dragOnGround = dragChanged;
                 turnStrength = TurnMod;
             }
             else
             {
-                dragOnGround = Default;
+                dragOnGround = defaultDrag;
                 turnStrength = TurnDef;
             }
 
@@ -101,7 +101,7 @@ public class mainCarcontrols : MonoBehaviour
             theRB.drag = dragOnGround;               
             if (Mathf.Abs(speedInput) > 0)
             {
-                theRB.AddForce(transform.forward * speedInput); //*var (0/1)
+                theRB.AddForce(transform.forward * speedInput * boost/*theRB.drag*/); //*var (0/1)
             }
         } 
         else
