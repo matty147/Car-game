@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class mainCarcontrols : MonoBehaviour
+public class MainCarControls : MonoBehaviour
 {
     public int playerNmb;
     //public static int NumberOfPlayers { get; private set; } = 1;
@@ -17,6 +17,8 @@ public class mainCarcontrols : MonoBehaviour
 
     private float speedInput;
     public float boost;
+    public float BoostDecrease = 1;
+
     private bool grounded;
 
     public LayerMask whatIsGround;
@@ -101,7 +103,7 @@ public class mainCarcontrols : MonoBehaviour
             theRB.drag = dragOnGround;               
             if (Mathf.Abs(speedInput) > 0)
             {
-                theRB.AddForce(transform.forward * speedInput * boost/*theRB.drag*/); //*var (0/1)
+                theRB.AddForce(transform.forward * speedInput * boost);
             }
         } 
         else
@@ -109,5 +111,16 @@ public class mainCarcontrols : MonoBehaviour
             theRB.drag = 0.1f;
             theRB.AddForce(Vector3.up * -gravityForce * 100f);
         }
+
+        if (boost > 1.000f)
+        {
+            boost -= BoostDecrease * 0.05f;
+            //Debug.Log($"Boost: {boost}");
+        } else
+        {
+            boost = 1;
+        }
+
+
     }
 }

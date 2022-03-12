@@ -4,23 +4,26 @@ using UnityEngine;
 
 public class Boost : MonoBehaviour
 {
-    public float Default = 1; // change in all Carcontrols1-4 (Defult + Boost)
-    public float pBoost = 1;
+    public float Default = 1f; // change in all Carcontrols1-4 (Defult + Boost)
+    public float StartBoost = 2f;
 
-    private mainCarcontrols GetCarControls(Collider other)
+    private void Awake()
     {
-        return GameObject.Find(other.tag).GetComponent<mainCarcontrols>();
+    }
+    private MainCarControls GetCarControls(Collider other)
+    {
+        return GameObject.Find(other.tag).GetComponent<MainCarControls>();
     }
 
 
-    void OnTriggerEnter(Collider other)
+    void OnTriggerStay(Collider other)
     {
-        GetCarControls(other).boost = pBoost;
+        GetCarControls(other).boost = StartBoost;
     }
+
 
     void OnTriggerExit(Collider other) 
     {
-        GetCarControls(other).boost = Default;
+        //GetCarControls(other).boost = Default;
     }
-
 }
