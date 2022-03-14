@@ -14,12 +14,28 @@ public class Timer : MonoBehaviour
     }
     void Update()
     {
-        time += Time.deltaTime;
-        if (time < 0)
+        switch (StartCars.StartStatus)
         {
-            
+            case 3:
+                timer.text = "";
+                break;
+            case 2:
+                timer.text = "Ready";
+                break;
+            case 1:
+                timer.text = "Set";
+                break;
+            default:
+                if (time < 0.5)
+                {
+                    timer.text = "Go!";
+                }
+                else
+                {
+                    timer.text = time.ToString("0.000");
+                } 
+                time += Time.deltaTime;
+                break;
         }
-        //Debug.Log(time);
-        timer.text = time.ToString("0.0000");
     }
 }

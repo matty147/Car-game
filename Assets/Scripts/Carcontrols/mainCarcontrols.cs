@@ -11,7 +11,7 @@ public class MainCarControls : MonoBehaviour
     public float forwardAccel = 8f, reverseAccel = 4f, maxSpeed = 50f, turnStrength = 180f, gravityForce = 10f, dragOnGround = 3f;
 
     //Player nmb for the controls
-    
+
     public float defaultDrag; // change in all DragChanger(Defult + DragChanged)
     public float dragChanged;
 
@@ -35,6 +35,7 @@ public class MainCarControls : MonoBehaviour
     {
         theRB.transform.parent = null;
         TurnDef = turnStrength;
+        //GameObject.Find("SceneManager").GetComponent<StartCars>();
     }
 
     void Awake()
@@ -103,7 +104,7 @@ public class MainCarControls : MonoBehaviour
             theRB.drag = dragOnGround;               
             if (Mathf.Abs(speedInput) > 0)
             {
-                theRB.AddForce(transform.forward * speedInput * boost);
+                theRB.AddForce(transform.forward * speedInput * boost * StartCars.CarGo);
             }
         } 
         else
