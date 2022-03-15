@@ -10,6 +10,9 @@ TagManager:
   - Player4
   - Player1car
   - mainCanvas
+  - Player2Car
+  - Player3Car
+  - Player4Car
   layers:
   - Default
   - TransparentFX
