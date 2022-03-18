@@ -3534,7 +3534,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1098889513
 MonoBehaviour:
@@ -7576,6 +7576,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 522920916847377610, guid: 9bf8598fe7c6aff4b838df2a96d7011c, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2884489595163210605, guid: 9bf8598fe7c6aff4b838df2a96d7011c, type: 3}
       propertyPath: m_TagString
       value: Player2
@@ -7736,6 +7740,10 @@ PrefabInstance:
       propertyPath: dragChanged
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8385743031481263153, guid: 9bf8598fe7c6aff4b838df2a96d7011c, type: 3}
+      propertyPath: WiiRemoteSwitch
+      value: 392
+      objectReference: {fileID: 0}
     - target: {fileID: 8385743031481263154, guid: 9bf8598fe7c6aff4b838df2a96d7011c, type: 3}
       propertyPath: m_TagString
       value: Player3Car
@@ -7755,6 +7763,10 @@ PrefabInstance:
     - target: {fileID: 8385743032574401469, guid: 9bf8598fe7c6aff4b838df2a96d7011c, type: 3}
       propertyPath: dragChanged
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8385743032574401469, guid: 9bf8598fe7c6aff4b838df2a96d7011c, type: 3}
+      propertyPath: WiiRemoteSwitch
+      value: 372
       objectReference: {fileID: 0}
     - target: {fileID: 8385743032574401470, guid: 9bf8598fe7c6aff4b838df2a96d7011c, type: 3}
       propertyPath: m_TagString
@@ -7776,6 +7788,10 @@ PrefabInstance:
       propertyPath: dragChanged
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8385743032711922044, guid: 9bf8598fe7c6aff4b838df2a96d7011c, type: 3}
+      propertyPath: WiiRemoteSwitch
+      value: 352
+      objectReference: {fileID: 0}
     - target: {fileID: 8385743032711922045, guid: 9bf8598fe7c6aff4b838df2a96d7011c, type: 3}
       propertyPath: m_TagString
       value: Player1car
@@ -7795,6 +7811,10 @@ PrefabInstance:
     - target: {fileID: 8385743033244102709, guid: 9bf8598fe7c6aff4b838df2a96d7011c, type: 3}
       propertyPath: dragChanged
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8385743033244102709, guid: 9bf8598fe7c6aff4b838df2a96d7011c, type: 3}
+      propertyPath: WiiRemoteSwitch
+      value: 412
       objectReference: {fileID: 0}
     - target: {fileID: 8385743033244102710, guid: 9bf8598fe7c6aff4b838df2a96d7011c, type: 3}
       propertyPath: m_TagString

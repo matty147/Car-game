@@ -20,6 +20,10 @@ public class MainCarControls : MonoBehaviour
     public float BoostDecrease = 1;
 
     private bool grounded;
+   
+    [SerializeField]
+    KeyCode WiiRemoteSwitch;
+    private int WiiRemoteOnOff;
 
     public LayerMask whatIsGround;
     public float groundRayLength = .5f;
@@ -40,6 +44,7 @@ public class MainCarControls : MonoBehaviour
 
     void Awake()
     {
+        WiiRemoteOnOff = 0;
         Debug.Log($"{playerNmb}");
         //make all a = all preset var;
         //macSpeed = macSpeed;        
@@ -47,8 +52,24 @@ public class MainCarControls : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(WiiRemoteSwitch))
+        {
+            WiiRemoteOnOff++;
+        }
+
+        if (WiiRemoteOnOff > 1)
+        {
+            WiiRemoteOnOff = 0;
+        }
+
         var vertical = Input.GetAxis($"Vertical{playerNmb}");
         var turnInput = Input.GetAxis($"Horizontal{playerNmb}");
+        if (WiiRemoteOnOff == 1)
+        {
+            vertical = Input.GetAxis($"WiiVertical{playerNmb}");
+            turnInput = Input.GetAxis($"WiiHorizontal{playerNmb}");
+        }
+
         /*
         if (PlayerNmb == 2)
         {S

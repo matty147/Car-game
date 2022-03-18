@@ -14293,6 +14293,7 @@ MonoBehaviour:
   dragChanged: 2
   boost: 1
   BoostDecrease: 1
+  WiiRemoteSwitch: 412
   whatIsGround:
     serializedVersion: 2
     m_Bits: 8
@@ -14344,6 +14345,7 @@ MonoBehaviour:
   dragChanged: 2
   boost: 1
   BoostDecrease: 1
+  WiiRemoteSwitch: 372
   whatIsGround:
     serializedVersion: 2
     m_Bits: 8
@@ -14395,6 +14397,7 @@ MonoBehaviour:
   dragChanged: 2
   boost: 1
   BoostDecrease: 1
+  WiiRemoteSwitch: 352
   whatIsGround:
     serializedVersion: 2
     m_Bits: 8
@@ -14446,6 +14449,7 @@ MonoBehaviour:
   dragChanged: 2
   boost: 1
   BoostDecrease: 1
+  WiiRemoteSwitch: 392
   whatIsGround:
     serializedVersion: 2
     m_Bits: 8

@@ -11,8 +11,8 @@ InputManager:
     descriptiveNegativeName: 
     negativeButton: q
     positiveButton: e
-    altNegativeButton: joystick button 4
-    altPositiveButton: joystick button 5
+    altNegativeButton: joystick 1 button 4
+    altPositiveButton: joystick 1 button 5
     gravity: 3
     dead: 0
     sensitivity: 3
@@ -22,19 +22,51 @@ InputManager:
     axis: 3
     joyNum: 1
   - serializedVersion: 3
+    m_Name: WiiHorizontal1
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: q
+    positiveButton: e
+    altNegativeButton: 
+    altPositiveButton: 
+    gravity: 3
+    dead: 0
+    sensitivity: 3
+    snap: 1
+    invert: 0
+    type: 2
+    axis: 3
+    joyNum: 1
+  - serializedVersion: 3
     m_Name: Vertical1
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 2
     positiveButton: w
-    altNegativeButton: joystick button 1
-    altPositiveButton: joystick button 0
+    altNegativeButton: joystick 1 button 1
+    altPositiveButton: joystick 1 button 0
     gravity: 3
     dead: 0
     sensitivity: 3
     snap: 1
     invert: 1
     type: 0
+    axis: 4
+    joyNum: 1
+  - serializedVersion: 3
+    m_Name: WiiVertical1
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: 2
+    positiveButton: 
+    altNegativeButton: 
+    altPositiveButton: 
+    gravity: 3
+    dead: 0
+    sensitivity: 3
+    snap: 1
+    invert: 1
+    type: 2
     axis: 4
     joyNum: 1
   - serializedVersion: 3
@@ -155,8 +187,8 @@ InputManager:
     descriptiveNegativeName: 
     negativeButton: left
     positiveButton: right
-    altNegativeButton: 
-    altPositiveButton: 
+    altNegativeButton: joystick 2 button 4
+    altPositiveButton: joystick 2 button 5
     gravity: 3
     dead: 0
     sensitivity: 3
@@ -166,7 +198,39 @@ InputManager:
     axis: 3
     joyNum: 2
   - serializedVersion: 3
+    m_Name: WiiHorizontal2
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: left
+    positiveButton: right
+    altNegativeButton: 
+    altPositiveButton: 
+    gravity: 3
+    dead: 0
+    sensitivity: 3
+    snap: 1
+    invert: 0
+    type: 2
+    axis: 3
+    joyNum: 2
+  - serializedVersion: 3
     m_Name: Horizontal3
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: v
+    positiveButton: n
+    altNegativeButton: joystick 3 button 4
+    altPositiveButton: joystick 3 button 5
+    gravity: 3
+    dead: 0
+    sensitivity: 3
+    snap: 1
+    invert: 0
+    type: 0
+    axis: 3
+    joyNum: 3
+  - serializedVersion: 3
+    m_Name: WiiHorizontal3
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: v
@@ -178,11 +242,27 @@ InputManager:
     sensitivity: 3
     snap: 1
     invert: 0
-    type: 0
+    type: 2
     axis: 3
     joyNum: 3
   - serializedVersion: 3
     m_Name: Horizontal4
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: k
+    positiveButton: ;
+    altNegativeButton: joystick 4 button 4
+    altPositiveButton: joystick 4 button 5
+    gravity: 3
+    dead: 0
+    sensitivity: 3
+    snap: 1
+    invert: 0
+    type: 0
+    axis: 3
+    joyNum: 4
+  - serializedVersion: 3
+    m_Name: WiiHorizontal4
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: k
@@ -194,11 +274,27 @@ InputManager:
     sensitivity: 3
     snap: 1
     invert: 0
-    type: 0
+    type: 2
     axis: 3
     joyNum: 4
   - serializedVersion: 3
     m_Name: Vertical2
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: up
+    positiveButton: down
+    altNegativeButton: joystick 2 button 1
+    altPositiveButton: joystick 1 button 0
+    gravity: 3
+    dead: 0
+    sensitivity: 3
+    snap: 1
+    invert: 1
+    type: 0
+    axis: 4
+    joyNum: 2
+  - serializedVersion: 3
+    m_Name: WiiVertical2
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: up
@@ -210,11 +306,27 @@ InputManager:
     sensitivity: 3
     snap: 1
     invert: 1
-    type: 0
+    type: 2
     axis: 4
     joyNum: 2
   - serializedVersion: 3
     m_Name: Vertical3
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: b
+    positiveButton: g
+    altNegativeButton: joystick 3 button 1
+    altPositiveButton: joystick 3 button 0
+    gravity: 3
+    dead: 0
+    sensitivity: 3
+    snap: 1
+    invert: 0
+    type: 0
+    axis: 4
+    joyNum: 3
+  - serializedVersion: 3
+    m_Name: WiiVertical3
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: b
@@ -226,11 +338,27 @@ InputManager:
     sensitivity: 3
     snap: 1
     invert: 0
-    type: 0
+    type: 2
     axis: 4
     joyNum: 3
   - serializedVersion: 3
     m_Name: Vertical4
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: o
+    positiveButton: l
+    altNegativeButton: joystick 4 button 1
+    altPositiveButton: joystick 4 button 0
+    gravity: 3
+    dead: 0
+    sensitivity: 3
+    snap: 1
+    invert: 1
+    type: 0
+    axis: 4
+    joyNum: 4
+  - serializedVersion: 3
+    m_Name: WiiVertical4
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: o
@@ -242,7 +370,7 @@ InputManager:
     sensitivity: 3
     snap: 1
     invert: 1
-    type: 0
+    type: 2
     axis: 4
     joyNum: 4
   - serializedVersion: 3
