@@ -10,6 +10,9 @@ https://www.models-resource.com/wii/mariokartwii
 Controls:
 
 - Player 1 - `2qwe`, Player 2 - `arrow keys`, Player 3 - `gvbn`, Player 4 -  `okl;`
+- WiiRemote Controls:
+	- tilt the wiiremote side ways to turn
+	- tilt the wiiremote forward and backward to move
 - `p` - pause
 - `f1` - next map change
 - `f2` - prev map change
