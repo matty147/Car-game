@@ -5,12 +5,16 @@ using UnityEngine.UI;
 
 public class GameInit : MonoBehaviour
 {
+    [SerializeField]
+    GameObject Timer;
+
+    public float WaitForXSec;
     private Camera getCam(int idx)
     {
         //Debug.Log($"Camera: 'Cam{idx}'");
         return GameObject.Find($"Cam{idx}").GetComponent<Camera>();
     }
-
+    
     enum Placement
     {
         Full,
@@ -117,6 +121,17 @@ public class GameInit : MonoBehaviour
                 Debug.LogError($"Wrong number of players {MainMenu.NumberOfPlayers}.");
                 break;
         }
+
+        if (MainMenu.NumberOfPlayers == 1)
+        {
+            Timer.SetActive(true); // false to hide, true to show
+        }
+        else
+        {
+            Timer.SetActive(true);
+            StartCoroutine(StartTimer());
+            
+        }
     }
 
 
@@ -127,4 +142,9 @@ public class GameInit : MonoBehaviour
         UpdateActivePlayers();
     }
 
+    IEnumerator StartTimer()
+    {
+        yield return new WaitForSeconds(WaitForXSec);
+        Timer.SetActive(false);
+    }
 }
