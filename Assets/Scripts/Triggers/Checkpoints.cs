@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Checkpoints : MonoBehaviour
 {
-    // todo make it possible for maps to have differrent number of checkpoints
+    // todo make it possible for maps to have differrent number of checkqpoints
 
     public static readonly int CHECKPOINT_COUNT = 3;
     private int Curentx, Curenty, Curntz;
@@ -16,6 +16,18 @@ public class Checkpoints : MonoBehaviour
     [SerializeField]
     int CheckpointNumber;
 
+    public static void Reset()
+    {
+        PlayerStatus[0] = 0;
+        PlayerStatus[1] = 0;
+        PlayerStatus[2] = 0;
+        PlayerStatus[3] = 0;
+        PlayerLap[0] = 0;
+        PlayerLap[1] = 0;
+        PlayerLap[2] = 0;
+        PlayerLap[3] = 0;
+        Debug.Log($"Reset: {PlayerStatus}");
+    }
 
     void OnTriggerEnter(Collider other)
     {

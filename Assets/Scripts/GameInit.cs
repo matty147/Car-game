@@ -152,7 +152,6 @@ public class GameInit : MonoBehaviour
 
         if (MainMenu.NumberOfPlayers == 1)
         {
-            Debug.Log("1working");
             Timer.SetActive(true); // false to hide, true to show
         }
         else

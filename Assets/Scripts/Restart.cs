@@ -13,7 +13,10 @@ public class Restart : MonoBehaviour
     void Update()
     {
         if (Input.GetKey(keyRestart))
+        {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            Checkpoints.Reset();
+        }
 
         if (Input.GetKey(kartRestart))
         {

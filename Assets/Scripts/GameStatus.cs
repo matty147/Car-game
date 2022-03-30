@@ -7,10 +7,6 @@ public class GameStatus : MonoBehaviour
     private static int[] PlayerStatus = new int[] { 0, 0, 0, 0 };
 
     private static readonly int CHECKPOINT_COUNT = 3;
-    public void Awake()
-    {
-        Debug.Log("Restet player lap when a new round starts");
-    }
     public static void registerCheckpoint(string playerTag, int newCheckpoint)
     {
         int playerIdx = getPlayerIdx(playerTag);
@@ -24,6 +20,15 @@ public class GameStatus : MonoBehaviour
         {
             Debug.Log($"Checkpoint ERROR: player={playerTag}, checkpoint={currentCheckpoint} > {newCheckpoint}");
         }
+    }
+
+    public static void Reset()
+    {
+        PlayerStatus[0] = 0;
+        PlayerStatus[1] = 0;
+        PlayerStatus[2] = 0;
+        PlayerStatus[3] = 0;
+        Debug.Log($"Reset: {PlayerStatus}");
     }
 
     private static int getPlayerIdx(string playerTag)

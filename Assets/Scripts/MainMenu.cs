@@ -7,10 +7,12 @@ public class MainMenu : MonoBehaviour
 {
     public static int NumberOfPlayers { get; private set; } = 1;
 
+    /*
     public void PlayGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
+    */
 
     public void QuitGame()
     {
@@ -44,18 +46,23 @@ public class MainMenu : MonoBehaviour
 
     public void Mapmaintrack()
     {
-        SceneManager.LoadScene("maintrack");
+        StartGame("maintrack");
     }
 
     public void Mapmaintrack2()
     {
-        SceneManager.LoadScene("maintrack2");
+        StartGame("maintrack2");
     }
 
     public void Mapmaintrack3()
     {
-        SceneManager.LoadScene("maintrack3");
+        StartGame("maintrack3");
     }
 
+    private void StartGame(string trackName) 
+    {
+        Checkpoints.Reset(); 
+        SceneManager.LoadScene(trackName);
+    }
 
 }
