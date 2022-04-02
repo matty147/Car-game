@@ -12,14 +12,29 @@ public class Pause : MonoBehaviour
     KeyCode menu;
     private float StopTime;
 
+    public float time;
+
     private void Start()
     {
         StopTime = 0;
+
+        if (time == 0)
+            {
+                time = 1;
+            }
+
+        if (time >= 100)
+        {
+            time = 1;
+            Debug.Log("timer too large");
+        }
     }
 
     private void Update()
     {
-        if (Input.GetKeyDown(menu))
+
+
+            if (Input.GetKeyDown(menu))
         {
             SceneManager.LoadScene("Menu");
         }
@@ -42,9 +57,20 @@ public class Pause : MonoBehaviour
         }
         else
         {
-            Time.timeScale = 1;
+            Time.timeScale = time;
         }
 
         //Debug.Log(StopTime);
+
+        if (time == 0)
+        {
+            time = 1;
+        }
+
+        if (time >= 100)
+        {
+            time = 1;
+            Debug.Log("timer too large");
+        }
     }
 }

@@ -22,14 +22,7 @@ public class GameStatus : MonoBehaviour
         }
     }
 
-    public static void Reset()
-    {
-        PlayerStatus[0] = 0;
-        PlayerStatus[1] = 0;
-        PlayerStatus[2] = 0;
-        PlayerStatus[3] = 0;
-        Debug.Log($"Reset: {PlayerStatus}");
-    }
+
 
     private static int getPlayerIdx(string playerTag)
     {
