@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GameStatus : MonoBehaviour
 {
+    //please set things in the Checkpoints scritp not here.
     private static int[] PlayerStatus = new int[] { 0, 0, 0, 0 };
 
     private static readonly int CHECKPOINT_COUNT = 3;

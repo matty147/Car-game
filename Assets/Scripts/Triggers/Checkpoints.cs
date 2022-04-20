@@ -10,7 +10,7 @@ public class Checkpoints : MonoBehaviour
     public static readonly int CHECKPOINT_COUNT = 3;
     private int Curentx, Curenty, Curntz;
     public int Checkpointx, Checkpointy, Checkpointz;
-    private static int[] PlayerLap = new int[] { 0, 0, 0, 0 };
+    public static int[] PlayerLap = new int[] { 0, 0, 0, 0 };
     private static int[] PlayerStatus = new int[] { 0, 0, 0, 0 };
     public Text Lap;
     [SerializeField]
@@ -26,7 +26,7 @@ public class Checkpoints : MonoBehaviour
         PlayerLap[1] = 0;
         PlayerLap[2] = 0;
         PlayerLap[3] = 0;
-        Debug.Log($"Reset: {PlayerStatus}");
+        //Debug.Log($"Reset: {PlayerStatus}");
     }
 
     void OnTriggerEnter(Collider other)

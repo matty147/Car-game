@@ -19,10 +19,34 @@ public class LapsCounter : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Counter1.SetActive(false);
-        Counter2.SetActive(false);
-        Counter3.SetActive(false);
-        Counter4.SetActive(true);
+     if (MainMenu.NumberOfPlayers == 1)
+        {
+            Counter1.SetActive(false);//right up
+            Counter2.SetActive(false);//left up
+            Counter3.SetActive(false);//left down
+            Counter4.SetActive(true); //right down
+        }
+     if (MainMenu.NumberOfPlayers == 2)
+        {
+            Counter1.SetActive(true);//right up
+            Counter2.SetActive(false);//left up
+            Counter3.SetActive(false);//left down
+            Counter4.SetActive(true); //right down
+        }
+     if (MainMenu.NumberOfPlayers == 3)
+        {
+            Counter1.SetActive(true);//right up
+            Counter2.SetActive(true);//left up
+            Counter3.SetActive(true);//left down
+            Counter4.SetActive(false); //right down
+        }
+     if (MainMenu.NumberOfPlayers == 4)
+        {
+            Counter1.SetActive(true);//right up
+            Counter2.SetActive(true);//left up
+            Counter3.SetActive(true);//left down
+            Counter4.SetActive(true); //right down
+        }
+        Debug.Log($"{Checkpoints.PlayerLap}/4");
     }
-
 }
