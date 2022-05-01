@@ -6161,7 +6161,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WaitForXSec: 1
-  audioMixer: {fileID: 0}
+  audioMixer: {fileID: 24100000, guid: 55e895cec7d7ded46b158bc20188f481, type: 2}
   audioSource: {fileID: 1988964819}
   ReadySetGO: {fileID: 8300000, guid: 92218f49791c2ed409384bb06e4f16ee, type: 3}
   volume: 0.5
@@ -6181,6 +6181,10 @@ MonoBehaviour:
   Counter2: {fileID: 1203988068}
   Counter3: {fileID: 1014657594}
   Counter4: {fileID: 554310543}
+  LapCounter1: {fileID: 0}
+  LapCounter2: {fileID: 0}
+  LapCounter3: {fileID: 0}
+  LapCounter4: {fileID: 0}
 --- !u!114 &1108025993
 MonoBehaviour:
   m_ObjectHideFlags: 0
