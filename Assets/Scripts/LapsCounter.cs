@@ -52,29 +52,35 @@ public class LapsCounter : MonoBehaviour
         }
         Debug.Log($"{Checkpoints.PlayerLap[0]}:{Checkpoints.PlayerLap[1]}:{Checkpoints.PlayerLap[2]}:{Checkpoints.PlayerLap[3]}");
     }
+
+    private void reportLap(Text counter, int playerIdx)
+    {
+        counter.text = (Checkpoints.PlayerLap[playerIdx] + 1).ToString("0");
+    }
+
     private void FixedUpdate()
     {
        if (MainMenu.NumberOfPlayers == 1)
         {
-            LapCounter4.text = Checkpoints.PlayerLap[0].ToString("0");
+            reportLap(LapCounter4, 0);
         }
         if (MainMenu.NumberOfPlayers == 2)
         {
-            LapCounter1.text = Checkpoints.PlayerLap[0].ToString("0");
-            LapCounter4.text = Checkpoints.PlayerLap[1].ToString("0");
+            reportLap(LapCounter1, 0);
+            reportLap(LapCounter4, 1);
         }
         if (MainMenu.NumberOfPlayers == 3)
         {
-            LapCounter2.text = Checkpoints.PlayerLap[0].ToString("0");
-            LapCounter1.text = Checkpoints.PlayerLap[1].ToString("0");
-            LapCounter3.text = Checkpoints.PlayerLap[2].ToString("0");
+            reportLap(LapCounter2, 0);
+            reportLap(LapCounter1, 1);
+            reportLap(LapCounter3, 2);
         }
         if (MainMenu.NumberOfPlayers == 4)
         {
-            LapCounter2.text = Checkpoints.PlayerLap[0].ToString("0");
-            LapCounter1.text = Checkpoints.PlayerLap[1].ToString("0");
-            LapCounter3.text = Checkpoints.PlayerLap[2].ToString("0");
-            LapCounter4.text = Checkpoints.PlayerLap[3].ToString("0");
+            reportLap(LapCounter2, 0);
+            reportLap(LapCounter1, 1);
+            reportLap(LapCounter3, 2);
+            reportLap(LapCounter4, 3);
         }
 
     }
