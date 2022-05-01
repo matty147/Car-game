@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Checkpoints : MonoBehaviour
 {
-    // todo make it possible for maps to have differrent number of checkqpoints
+    // todo make it possible for maps to have differrent number of checkpoints
 
     public static readonly int CHECKPOINT_COUNT = 3;
     private int Curentx, Curenty, Curntz;

@@ -9,6 +9,9 @@ public class Pause : MonoBehaviour
     KeyCode pause;
 
     [SerializeField]
+    GameObject PauseTxt, Timer, Counter1, Counter2, Counter3, Counter4;
+
+    [SerializeField]
     KeyCode menu;
     private float StopTime;
 
@@ -29,7 +32,6 @@ public class Pause : MonoBehaviour
             Debug.Log("timer too large");
         }
     }
-
     private void Update()
     {
 
@@ -49,15 +51,26 @@ public class Pause : MonoBehaviour
             StopTime = 0;
         }
 
-
+        //detect how many player are playing(can do it with a private void thing) and then switch on/off counters when paused.
         if(StopTime == 1)
         {
             Time.timeScale = 0;
-
+            PauseTxt.SetActive(true);
+           // Timer.SetActive(false);
+         /*   Counter1.SetActive(false);
+            Counter2.SetActive(false);
+            Counter3.SetActive(false);
+            Counter4.SetActive(false);*/
         }
         else
         {
             Time.timeScale = time;
+            PauseTxt.SetActive(false);
+            //Timer.SetActive(true);
+          /*  Counter1.SetActive(true);
+            Counter2.SetActive(true);
+            Counter3.SetActive(true);
+            Counter4.SetActive(true);*/
         }
 
         //Debug.Log(StopTime);
