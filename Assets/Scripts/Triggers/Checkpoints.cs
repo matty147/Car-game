@@ -19,7 +19,7 @@ public class Checkpoints : MonoBehaviour
     public static void Reset()
     {
         PlayerStatus[0] = 0;
-        PlayerStatus[1] = 0;
+        PlayerStatus[1] = 0;     
         PlayerStatus[2] = 0;
         PlayerStatus[3] = 0;
         PlayerLap[0] = 0;

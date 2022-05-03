@@ -9,7 +9,7 @@ public class Pause : MonoBehaviour
     KeyCode pause;
 
     [SerializeField]
-    GameObject PauseTxt, Timer, Counter1, Counter2, Counter3, Counter4;
+    GameObject PauseTxt, Timer, Counter1, Counter2, Counter3, Counter4, BG;
 
     [SerializeField]
     KeyCode menu;
@@ -56,21 +56,23 @@ public class Pause : MonoBehaviour
         {
             Time.timeScale = 0;
             PauseTxt.SetActive(true);
-           // Timer.SetActive(false);
-         /*   Counter1.SetActive(false);
-            Counter2.SetActive(false);
-            Counter3.SetActive(false);
-            Counter4.SetActive(false);*/
+            // Timer.SetActive(false);
+            /* Counter1.SetActive(false);
+               Counter2.SetActive(false);
+               Counter3.SetActive(false);
+               Counter4.SetActive(false);*/
+               //BG.SetActive(true);
         }
         else
         {
             Time.timeScale = time;
             PauseTxt.SetActive(false);
             //Timer.SetActive(true);
-          /*  Counter1.SetActive(true);
+          /*Counter1.SetActive(true);
             Counter2.SetActive(true);
             Counter3.SetActive(true);
             Counter4.SetActive(true);*/
+           //BG.SetActive(false);
         }
 
         //Debug.Log(StopTime);

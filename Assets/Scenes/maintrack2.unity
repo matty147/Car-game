@@ -4402,6 +4402,7 @@ MonoBehaviour:
   Counter2: {fileID: 1561700248}
   Counter3: {fileID: 1791327057}
   Counter4: {fileID: 1378825908}
+  BG: {fileID: 0}
   menu: 109
   time: 1
 --- !u!114 &1098889515
@@ -4445,10 +4446,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 895a27e74ce0ee84aa5ce90a344bbe3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MaxLapCount: 3
+  WaitForXSec: 5
   Counter1: {fileID: 1076228827}
   Counter2: {fileID: 1561700248}
   Counter3: {fileID: 1791327057}
   Counter4: {fileID: 1378825908}
+  EndGame: {fileID: 0}
   LapCounter1: {fileID: 1076228829}
   LapCounter2: {fileID: 1561700250}
   LapCounter3: {fileID: 1791327059}
