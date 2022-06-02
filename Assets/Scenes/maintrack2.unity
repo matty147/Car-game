@@ -2292,6 +2292,36 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: -1504981713932161579, guid: 8874145cae86f7848b133e902eed1284, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 8874145cae86f7848b133e902eed1284, type: 3}
+--- !u!1 &620754703
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 620754704}
+  m_Layer: 0
+  m_Name: EndGameScreen
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &620754704
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 620754703}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 374.25674, y: 316.48544, z: -324.2217}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &641069532
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4349,6 +4379,7 @@ GameObject:
   - component: {fileID: 1098889513}
   - component: {fileID: 1098889516}
   - component: {fileID: 1098889517}
+  - component: {fileID: 1098889518}
   m_Layer: 0
   m_Name: Scene Manager
   m_TagString: Untagged
@@ -4402,7 +4433,7 @@ MonoBehaviour:
   Counter2: {fileID: 1561700248}
   Counter3: {fileID: 1791327057}
   Counter4: {fileID: 1378825908}
-  BG: {fileID: 0}
+  BG: {fileID: 620754703}
   menu: 109
   time: 1
 --- !u!114 &1098889515
@@ -4452,11 +4483,26 @@ MonoBehaviour:
   Counter2: {fileID: 1561700248}
   Counter3: {fileID: 1791327057}
   Counter4: {fileID: 1378825908}
-  EndGame: {fileID: 0}
+  EndGame: {fileID: 620754703}
   LapCounter1: {fileID: 1076228829}
   LapCounter2: {fileID: 1561700250}
   LapCounter3: {fileID: 1791327059}
   LapCounter4: {fileID: 1378825910}
+--- !u!114 &1098889518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1098889511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b612a4c2aba5b94ca42e1fe9e9fce0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioMixer: {fileID: 24100000, guid: 55e895cec7d7ded46b158bc20188f481, type: 2}
+  audioSource: {fileID: 984765442}
+  StartCar: {fileID: 8300000, guid: 6262ce8c738297b4691074d1903a6451, type: 3}
 --- !u!4 &1102635651 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 9a598df068fbe2043a300e9dafd5bb7f, type: 3}
