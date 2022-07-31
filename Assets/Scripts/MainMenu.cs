@@ -20,12 +20,6 @@ public class MainMenu : MonoBehaviour
         Application.Quit();
     }
 
-    public void ResetControllers()
-    {
-        //set ControllerTester to defult.
-        Debug.Log("ResetControllers");
-    }
-
     public void Player1()
     {
         Debug.Log("P1");
